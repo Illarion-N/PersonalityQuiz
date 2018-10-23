@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		EBA6A3E2217DBDE9003F440D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA6A3E1217DBDE9003F440D /* AppDelegate.swift */; };
-		EBA6A3E4217DBDE9003F440D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA6A3E3217DBDE9003F440D /* ViewController.swift */; };
+		EBA6A3E4217DBDE9003F440D /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA6A3E3217DBDE9003F440D /* IntroductionViewController.swift */; };
 		EBA6A3E7217DBDE9003F440D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBA6A3E5217DBDE9003F440D /* Main.storyboard */; };
 		EBA6A3E9217DBDF2003F440D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBA6A3E8217DBDF2003F440D /* Assets.xcassets */; };
 		EBA6A3EC217DBDF2003F440D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBA6A3EA217DBDF2003F440D /* LaunchScreen.storyboard */; };
+		EBA6A3F4217EC630003F440D /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA6A3F3217EC630003F440D /* QuestionViewController.swift */; };
+		EBA6A3F6217EC651003F440D /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA6A3F5217EC651003F440D /* ResultsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EBA6A3DE217DBDE9003F440D /* PersonalityQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonalityQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBA6A3E1217DBDE9003F440D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EBA6A3E3217DBDE9003F440D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EBA6A3E3217DBDE9003F440D /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
 		EBA6A3E6217DBDE9003F440D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EBA6A3E8217DBDF2003F440D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBA6A3EB217DBDF2003F440D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EBA6A3ED217DBDF2003F440D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBA6A3F3217EC630003F440D /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		EBA6A3F5217EC651003F440D /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +59,9 @@
 			isa = PBXGroup;
 			children = (
 				EBA6A3E1217DBDE9003F440D /* AppDelegate.swift */,
-				EBA6A3E3217DBDE9003F440D /* ViewController.swift */,
+				EBA6A3E3217DBDE9003F440D /* IntroductionViewController.swift */,
+				EBA6A3F3217EC630003F440D /* QuestionViewController.swift */,
+				EBA6A3F5217EC651003F440D /* ResultsViewController.swift */,
 				EBA6A3E5217DBDE9003F440D /* Main.storyboard */,
 				EBA6A3E8217DBDF2003F440D /* Assets.xcassets */,
 				EBA6A3EA217DBDF2003F440D /* LaunchScreen.storyboard */,
@@ -135,8 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBA6A3E4217DBDE9003F440D /* ViewController.swift in Sources */,
+				EBA6A3E4217DBDE9003F440D /* IntroductionViewController.swift in Sources */,
 				EBA6A3E2217DBDE9003F440D /* AppDelegate.swift in Sources */,
+				EBA6A3F4217EC630003F440D /* QuestionViewController.swift in Sources */,
+				EBA6A3F6217EC651003F440D /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
