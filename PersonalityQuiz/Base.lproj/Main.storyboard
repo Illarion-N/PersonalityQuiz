@@ -109,8 +109,8 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xOG-RT-Sk8">
-                                <rect key="frame" x="122.5" y="80" width="75.5" height="38.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="xOG-RT-Sk8">
+                                <rect key="frame" x="8" y="80" width="304" height="38.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -220,19 +220,34 @@
                             <constraint firstItem="NPx-Mc-NJx" firstAttribute="leading" secondItem="6x7-JR-Pmn" secondAttribute="leading" constant="8" id="8oO-y6-Jrm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pOr-rg-QLn" secondAttribute="trailing" constant="16" id="BHh-Es-0qj"/>
                             <constraint firstItem="pOr-rg-QLn" firstAttribute="leading" secondItem="9ku-VY-hrL" secondAttribute="leadingMargin" constant="16" id="GVu-SX-jBC"/>
+                            <constraint firstItem="xOG-RT-Sk8" firstAttribute="leading" secondItem="6x7-JR-Pmn" secondAttribute="leading" constant="8" id="PLl-y3-Ile"/>
                             <constraint firstItem="6x7-JR-Pmn" firstAttribute="bottom" secondItem="pOr-rg-QLn" secondAttribute="bottom" constant="16" id="W0f-UE-eoF"/>
                             <constraint firstItem="ykQ-N6-0Xz" firstAttribute="centerY" secondItem="9ku-VY-hrL" secondAttribute="centerY" id="Zb3-WT-hSL"/>
                             <constraint firstItem="6x7-JR-Pmn" firstAttribute="trailing" secondItem="Syg-xL-Bj7" secondAttribute="trailing" constant="16" id="bsi-hc-JuM"/>
+                            <constraint firstItem="6x7-JR-Pmn" firstAttribute="trailing" secondItem="xOG-RT-Sk8" secondAttribute="trailing" constant="8" id="fHS-gM-ifY"/>
                             <constraint firstItem="6x7-JR-Pmn" firstAttribute="trailing" secondItem="NPx-Mc-NJx" secondAttribute="trailing" constant="8" id="mjy-rI-28f"/>
                             <constraint firstItem="xOG-RT-Sk8" firstAttribute="top" secondItem="6x7-JR-Pmn" secondAttribute="top" constant="16" id="oaj-Ij-Wyg"/>
                             <constraint firstItem="Syg-xL-Bj7" firstAttribute="centerY" secondItem="9ku-VY-hrL" secondAttribute="centerY" constant="16" id="ptz-0n-yXb"/>
                             <constraint firstItem="NPx-Mc-NJx" firstAttribute="centerY" secondItem="9ku-VY-hrL" secondAttribute="centerY" constant="32" id="sDG-LR-pV5"/>
-                            <constraint firstItem="xOG-RT-Sk8" firstAttribute="centerX" secondItem="9ku-VY-hrL" secondAttribute="centerX" id="uYk-J5-sAe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6x7-JR-Pmn"/>
                     </view>
                     <navigationItem key="navigationItem" id="OaH-GC-vGm"/>
                     <connections>
+                        <outlet property="QuestionLabel" destination="xOG-RT-Sk8" id="qne-45-Hce"/>
+                        <outlet property="multiplyStackView" destination="NPx-Mc-NJx" id="cDo-UT-x3a"/>
+                        <outlet property="progressView" destination="pOr-rg-QLn" id="syS-3W-FE0"/>
+                        <outlet property="rangedStackView" destination="Syg-xL-Bj7" id="YI5-sE-qtu"/>
+                        <outlet property="singleStackView" destination="ykQ-N6-0Xz" id="dWO-Vv-sfs"/>
+                        <outletCollection property="singleButton" destination="bF9-SY-hvC" collectionClass="NSMutableArray" id="7Hh-em-HRm"/>
+                        <outletCollection property="singleButton" destination="WQ8-cS-WVC" collectionClass="NSMutableArray" id="Jm5-20-Qol"/>
+                        <outletCollection property="singleButton" destination="dk7-T1-XVp" collectionClass="NSMutableArray" id="pxy-OP-uri"/>
+                        <outletCollection property="singleButton" destination="ffO-Qq-HWM" collectionClass="NSMutableArray" id="Wct-i8-CBl"/>
+                        <outletCollection property="multiplyLabel" destination="zGK-9o-kcs" collectionClass="NSMutableArray" id="ryi-go-fwb"/>
+                        <outletCollection property="multiplyLabel" destination="1D8-aL-96Y" collectionClass="NSMutableArray" id="FWa-4m-i0d"/>
+                        <outletCollection property="multiplyLabel" destination="gbi-FT-eH1" collectionClass="NSMutableArray" id="HfK-Hu-BOP"/>
+                        <outletCollection property="multiplyLabel" destination="A0j-qn-bLc" collectionClass="NSMutableArray" id="XCL-NI-WN0"/>
+                        <outletCollection property="rangedLabel" destination="oOR-Kt-K5f" collectionClass="NSMutableArray" id="tRj-dR-tJ7"/>
                         <segue destination="IVB-v0-Uik" kind="show" identifier="ResultSegue" id="KdM-fY-Ne5"/>
                     </connections>
                 </viewController>
@@ -249,7 +264,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PqV-Rl-477">
-                                <rect key="frame" x="8" y="213.5" width="304" height="141.5"/>
+                                <rect key="frame" x="8" y="203.5" width="304" height="161.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы это - 🐶!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zGK-lc-T1t">
                                         <rect key="frame" x="0.0" y="0.0" width="304" height="60"/>
@@ -257,8 +272,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы невероятно удивительное существо, любящее постоянно напоминать окружающим вам людям кто вы на самом деле." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t62-op-szb">
-                                        <rect key="frame" x="0.0" y="60" width="304" height="81.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы невероятно удивительный человек, любящий постоянно напоминать окружающим вам людям какой хороший друг вы на самом деле." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t62-op-szb">
+                                        <rect key="frame" x="0.0" y="60" width="304" height="101.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
