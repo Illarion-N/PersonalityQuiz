@@ -10,21 +10,33 @@ import UIKit
 
 class ResultsViewController: UIViewController {
 
+    @IBOutlet weak var resultAnswerLabel: UILabel!
+    @IBOutlet weak var resultDefenitionLabel: UILabel!
+    var responces: [Answer]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        navigationItem.hidesBackButton = true
+       calculateResult()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func calculateResult() {
+        var frequencyOfAnswers: [AnimalType: Int] = [:]
+        
+        let responseTypes = responces.map{$0.type}
+        for responces in responseTypes {
+            frequencyOfAnswers[responces] = (frequencyOfAnswers[responces] ?? 0) + 1
+        }
+        let frequencyOfAnswersSorted = frequencyOfAnswers.sorted(by: {
+            (pair1, pair2) -> Bool in
+            return pair1.value > pair2.value
+        })
+        print(#function, frequencyOfAnswers)
+        print(#function, frequencyOfAnswersSorted)
+        let mostCommonAnswer = frequencyOfAnswersSorted.first!.key
+        
+        resultAnswerLabel.text = "Вы — это \(mostCommonAnswer.rawValue)!"
+        resultDefenitionLabel.text = mostCommonAnswer.defeniton
     }
-    */
-
+    
 }
